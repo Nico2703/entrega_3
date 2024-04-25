@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{%  block titulo %}
+    Cliente
+{% endblock titulo %}
+
+
+{% block contenido %}
+    {% for cliente in clientes %}
+        <h3>{{cliente.apellido}}, {{cliente.nombre}}</h3>
+        <h4>Nacido el {{cliente.nacimiento}} en {{cliente.pais_origen_id}}</h4>
+        {% if cliente.pais_origen_id == False %}
+            <p>No registra país de origen</p>
+        {% endif %}
+        <br>
+        <h4>Productos adquiridos</h4>
+        <p>{{cliente.productos}}</p>
+    {% endfor %}
+
+    <a href="{% url 'core:home' %}"> Ir a home </a>
+{% endblock contenido %}   
+</body>
+</html>
