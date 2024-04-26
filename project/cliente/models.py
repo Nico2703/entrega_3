@@ -7,3 +7,7 @@ class Cliente(models.Model):
 
     def __str__(self):
         return f"{self.apellido}, {self.nombre}, {self.nacimiento}"
+
+    class Meta:
+        verbose_name = "cliente"
+        verbose_name_plural = "clientes"

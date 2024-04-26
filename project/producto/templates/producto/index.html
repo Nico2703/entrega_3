@@ -1,5 +1,26 @@
 {% extends 'core/base.html' %}
 
+
 {%  block titulo %}
-{% include 'core/components/titles.html' with titulo="Agregar - Productos" %}
+    {% include 'core/components/titles.html' with titulo="Agregar - Productos" %}
 {% endblock titulo %}
+
+{% block contenido %}
+    <form style="position: absolute; padding: 200px 600px;" action="{% url 'producto:home' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <div style="padding: 30px 130px;">
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+
+    <div style="position: absolute; padding: 450px 100px;">
+        <h4 style="padding-bottom: 30px;" class="text-white bg-secondary rounded"> Productos registrados </h4>
+        {% for producto in productos %}
+            <p class="text-white bg-secondary rounded">{{producto.nombre}} ----> {{producto.descripcion}}</p>
+        {% endfor %}
+    </div>
+
+{% endblock contenido %}

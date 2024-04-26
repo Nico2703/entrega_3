@@ -1,10 +1,6 @@
 from django import forms
 from . import models
 
-# class ProductoCategoriaForms(forms.Form):
-#     nombre = forms.CharField()
-#     descripcion = forms.CharField()
-
 class ClienteCategoriaForms(forms.ModelForm):
     class Meta:
         model = models.Cliente
