@@ -16,7 +16,7 @@
     </form>
 
     <div style="position: absolute; padding: 450px 100px;">
-        <h4 style="padding-bottom: 30px;" class="text-white bg-secondary rounded"> Compras registradas </h4>
+        <h4 style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> Compras registradas </h4>
         {% for compra in compras %}
             <p class="text-white bg-secondary rounded">{{compra.cliente.apellido}}, {{compra.cliente.nombre}} ----> {{compra.producto.nombre}} - Costo: {{compra.precio}}</p>
         {% endfor %}

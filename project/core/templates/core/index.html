@@ -6,16 +6,25 @@
 {% endblock titulo %} 
 
 {% block contenido %}
-<div style="position: absolute; padding: 80px 88px;">
-    <p style="padding-bottom: 30px;" class="text-white bg-secondary rounded"> 
-    Base de datos creada para registrar compras de productos por cliente 
-    </p>
-    <p style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> 
-    Motor de búsqueda de clientes incorporado 
-    </p>
+    <div style="position: absolute; padding: 80px 88px;">
+        <p style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> 
+        Base de datos creada para registrar compras de productos por cliente 
+        </p>
+        <p style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> 
+        Motor de búsqueda de clientes incorporado 
+        </p>
 
+        <form style="margin: 50px 550px;" action="{% url 'core:home' %}" method="GET">
+            <label style="padding-bottom: 20px;"> Búsqueda de clientes por apellido </label>
+            <p style="padding-left: 25px;"><input type="text" name="consulta" placeholder="Escriba aquí"></p>
+        </form>
 
-    
-</div>
+        <div style="padding: 0px 450px;">
+            <h4 style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> Clientes encontrados </h4>
+            {% for cliente in clientes %}
+                    <p style="text-align: center;" class="text-white bg-secondary rounded">{{cliente.apellido}}, {{cliente.nombre}} - Nacimiento: {{cliente.nacimiento}}</p>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock contenido %}
 

@@ -17,7 +17,7 @@
     </form>
 
     <div style="position: absolute; padding: 450px 100px;">
-        <h4 style="padding-bottom: 30px;" class="text-white bg-secondary rounded"> Clientes registrados </h4>
+        <h4 style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> Clientes registrados </h4>
         {% for cliente in clientes %}
             <p class="text-white bg-secondary rounded">{{cliente.apellido}}, {{cliente.nombre}} - Nacimiento: {{cliente.nacimiento}}</p>
         {% endfor %}
