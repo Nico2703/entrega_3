@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 
 {%  block titulo %}
-    Cliente
+    {% include 'core/components/titles.html' with titulo="Agregar - Clientes" %}
 {% endblock titulo %}
 
 
@@ -17,7 +17,6 @@
         <p>{{cliente.productos}}</p>
     {% endfor %}
 
-    <a href="{% url 'core:home' %}"> Ir a home </a>
 {% endblock contenido %}   
 </body>
 </html>

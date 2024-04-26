@@ -1,12 +1,10 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
-{%  block titulo %}
-    Datos de clientes
-{% endblock titulo %}
+{% block titulo %}
+    {% include 'core/components/titles.html' with titulo="Base de datos - Django" %}
+{% endblock titulo %} 
 
 {% block contenido %}
-            <a href="{% url 'cliente:home' %}"> Buscar clientes </a>
-    </ul>
 {% endblock contenido %}
-</body>
-</html>
+

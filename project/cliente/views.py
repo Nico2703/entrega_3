@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from . import models
-
+from django.shortcuts import render, redirect
+from . import models, forms
 
 def home(request):
     consulta_clientes = models.Cliente.objects.all()
