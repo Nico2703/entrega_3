@@ -1,6 +1,5 @@
 {% extends 'core/base.html' %}
 
-
 {%  block titulo %}
     {% include 'core/components/titles.html' with titulo="Agregar - Productos" %}
 {% endblock titulo %}
@@ -16,11 +15,10 @@
         </div>
     </form>
 
-    <div style="position: absolute; padding: 450px 100px;">
+    <div style="position: absolute; margin: 450px 100px;">
         <h4 style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> Productos registrados </h4>
         {% for producto in productos %}
             <p class="text-white bg-secondary rounded">{{producto.nombre}} ----> {{producto.descripcion}}</p>
         {% endfor %}
     </div>
-
 {% endblock contenido %}

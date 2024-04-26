@@ -2,7 +2,6 @@ from django.shortcuts import render
 from . import models
 from cliente import models
 
-
 def home(request):
     consulta = request.GET.get("consulta", None)
     if consulta:
