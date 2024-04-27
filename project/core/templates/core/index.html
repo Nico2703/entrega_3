@@ -22,8 +22,9 @@
         <div style="padding: 0px 450px;">
             <h4 style="padding-bottom: 30px; text-align: center;" class="text-white bg-secondary rounded"> Clientes encontrados </h4>
             {% for cliente in clientes %}
-                    <p style="text-align: center;" class="text-white bg-secondary rounded">{{cliente.apellido}}, {{cliente.nombre}} - Nacimiento: {{cliente.nacimiento}}</p>
-            {% endfor %}
+                <p style="text-align: center;" class="text-white bg-secondary rounded">{{cliente.apellido}}, {{cliente.nombre}} - Nacimiento: {{cliente.nacimiento}}</p> 
+            {% endfor %} 
+            <p style="text-align: center;" class="text-white bg-secondary rounded">Fin de búsqueda</p> 
         </div>
     </div>
 {% endblock contenido %}
